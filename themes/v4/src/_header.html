@@ -1,0 +1,51 @@
+<header class="header v4h" id="v4h">
+  <div class="wrap">
+    <div class="hdr">
+      <a class="logo" href="index.html" aria-label="Ready Pack — на главную"><img src="img/logo.svg" alt="Ready Pack" width="98" height="34"></a>
+      <form class="v4-search" role="search" onsubmit="return false">
+        <svg class="i i--s" aria-hidden="true"><use href="#i-search"/></svg>
+        <input type="search" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+      </form>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="catalog-palletizers.html" data-nav="catalog">Оборудование</a>
+        <a href="#" data-nav="solutions">Решения</a>
+        <a href="case-uvelka.html" data-nav="cases">Проекты</a>
+        <a href="#" data-nav="service">Сервис</a>
+        <a href="#" data-nav="company">Компания</a>
+      </nav>
+      <div class="header__r">
+        <a class="phone" href="tel:+78005503074"><b>8 800 550-30-74</b><span>бесплатно по России</span></a>
+        <button class="v4-burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="v4-menu"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="v4-menu" id="v4-menu" hidden>
+      <div class="v4-menu__in">
+        <nav class="v4-menu__nav" aria-label="Меню">
+          <a href="catalog-palletizers.html">Оборудование</a>
+          <a href="#">Решения</a>
+          <a href="case-uvelka.html">Проекты</a>
+          <a href="#">Сервис</a>
+          <a href="#">Компания</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <div class="v4-menu__side">
+          <span class="v4-menu__note">Производство в Челябинске · работаем по России и СНГ</span>
+          <a class="v4-menu__phone" href="tel:+78005503074">8 800 550-30-74</a>
+          <a href="mailto:sales@readypack.ru">sales@readypack.ru</a>
+          <span class="v4-menu__links"><a href="#">Сервис 24/7</a><a href="#">Каталог в PDF</a><a href="#">Telegram</a><a href="#">WhatsApp</a><a href="#">MAX</a></span>
+          <a class="btn btn--dark btn--arrow" href="podbor.html">Подобрать оборудование <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+(() => {
+  const h = document.getElementById('v4h'), b = h.querySelector('.v4-burger'), m = document.getElementById('v4-menu');
+  const sc = () => h.classList.toggle('is-scrolled', scrollY > 24);
+  addEventListener('scroll', sc, {passive: true}); sc();
+  const set = o => { b.setAttribute('aria-expanded', o); m.hidden = !o; h.classList.toggle('is-open', o); };
+  b.addEventListener('click', () => set(m.hidden));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !m.hidden) { set(false); b.focus(); } });
+})();
+</script>

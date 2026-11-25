@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru" data-variant="v2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Кейс «Увелка»: роботизированная линия паллетирования коробок с крупами — Ready Pack</title>
+<meta name="description" content="Как Ready Pack роботизировал паллетирование на заводе «Увелка»: +50% продукции в смену, 200 млн ₽ экономии в год, 5 роботов вместо 9 по первому проекту.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="../assets/css/mk.css">
+
+</head>
+<body class="page-case-uvelka theme-v2">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></symbol>
+  <symbol id="i-pallet" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="6" rx="1"/><rect x="13" y="4" width="7" height="6" rx="1"/><rect x="8.5" y="10" width="7" height="5" rx="1"/><path d="M3 15h18M5 15v4M12 15v4M19 15v4M3 19h18"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><path d="M5 21h8M9 21v-4"/><circle cx="9" cy="15" r="2"/><path d="m10.5 13.5 4-6"/><circle cx="15.5" cy="6" r="2"/><path d="M17.3 6.8 20 9v3"/><path d="M18.5 12h3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V10l5 3V4h3v17z"/><path d="M7 17h2M12 17h2M17 17h1"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5l-9 9a2.1 2.1 0 0 1-3-3l9-9a4 4 0 0 0-2-2Z"/><path d="M14.5 6.5 17 4l3 3-2.5 2.5"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4-5"/><circle cx="12" cy="17" r="1.2"/></symbol>
+  <symbol id="i-weight" viewBox="0 0 24 24"><path d="M6.5 8h11l2.5 12H4z"/><circle cx="12" cy="5" r="2"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 4.6a3.2 3.2 0 0 1 0 6.3M18 14.5a6 6 0 0 1 3 5.5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="m3 15 12-12 6 6L9 21z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M12 11v10M4 7l8 4 8-4"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar__l">
+      <span class="status">Производство в Челябинске · работаем по России и СНГ</span>
+      <a href="#">Сервис 24/7</a>
+      <a href="#">Каталог в PDF</a>
+    </div>
+    <div class="topbar__r">
+      <a href="mailto:sales@readypack.ru">sales@readypack.ru</a>
+      <a href="#">Telegram</a><a href="#">WhatsApp</a><a href="#">MAX</a>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Основное меню">
+      <a href="catalog-palletizers.html" data-nav="catalog">Оборудование</a>
+      <a href="#" data-nav="solutions">Решения</a>
+      <a href="case-uvelka.html" data-nav="cases" class="is-active" aria-current="page">Проекты</a>
+      <a href="#" data-nav="service">Сервис</a>
+      <a href="#" data-nav="company">Компания</a>
+      <a href="#" data-nav="contacts">Контакты</a>
+    </nav>
+    <a class="logo" href="index.html" aria-label="Ready Pack — на главную"><img src="../assets/img/logo.svg" alt="Ready Pack" width="98" height="34"></a>
+    <div class="header__r">
+      <a class="phone" href="tel:+78005503074"><b>8 800 550-30-74</b><span>бесплатно по России</span></a>
+      <button class="icon-btn" aria-label="Поиск"><svg class="i i--s"><use href="#i-search"/></svg></button>
+      <a class="btn btn--dark btn--sm btn--cta" href="podbor.html">Подобрать оборудование</a>
+      <button class="icon-btn burger" aria-label="Меню" aria-expanded="false" aria-controls="v2-menu"><svg class="i"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="v2-menu" id="v2-menu" hidden>
+    <nav class="wrap" aria-label="Меню">
+      <a href="catalog-palletizers.html">Оборудование</a>
+      <a href="#">Решения</a>
+      <a href="case-uvelka.html">Проекты</a>
+      <a href="#">Сервис</a>
+      <a href="#">Компания</a>
+      <a href="#">Контакты</a>
+      <a class="v2-menu__phone" href="tel:+78005503074">8 800 550-30-74</a>
+      <a class="btn btn--dark" href="podbor.html">Подобрать оборудование</a>
+    </nav>
+  </div>
+  <script>(()=>{const b=document.querySelector('.header .burger'),m=document.getElementById('v2-menu');b.addEventListener('click',()=>{const o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',o);document.documentElement.classList.toggle('v2-menu-open',o)});})();</script>
+</header>
+
+<main>
+<div class="wrap">
+  <section class="case-hero">
+    <img src="../assets/img/uv-2.webp" alt="Робот укладывает коробки с крупами на паллету на заводе «Увелка»">
+    <div class="case-hero__in">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-hidden="true">/</span><a href="#">Проекты</a><span aria-hidden="true">/</span><span>«Увелка»</span></nav>
+      <div class="case__tags"><span class="chip chip--tag">Пищевая промышленность</span><span class="chip chip--tag">Паллетирование</span><span class="chip chip--tag">Комплексная линия</span><span class="chip chip--tag">Декабрь 2019</span></div>
+      <h1 class="h1" style="font-size:clamp(36px,4.6vw,64px)">Роботизированная линия паллетирования коробок с&nbsp;крупами</h1>
+      <p class="lead">Производство «Увелки» было хорошо автоматизировано, но&nbsp;на&nbsp;паллетировании оставался ручной труд. Спроектировали комплексную автоматизацию конечной упаковки и&nbsp;запустили её очередями.</p>
+      <div class="case-client"><img src="../assets/img/cl-uvelka.webp" alt="Увелка"><span>ООО «Ресурс», бренд «Увелка»<br>Челябинская область</span></div>
+    </div>
+  </section>
+  <div class="result">
+    <div class="res res--o"><b>+50<small>%</small></b><span>больше продукции в смену</span></div>
+    <div class="res"><b>200<small>млн ₽</small></b><span>экономии в год</span></div>
+    <div class="res"><b>−28</b><span>грузчиков на участке</span></div>
+    <div class="res"><b>5<small>вместо 9</small></b><span>роботов после нашего предпроекта</span></div>
+  </div>
+</div>
+
+<div class="wrap section">
+  <div class="c-layout">
+    <nav class="toc" aria-label="Содержание кейса">
+      <b>Содержание</b>
+      <a href="#start" class="on">С чего начинали</a>
+      <a href="#tasks">Задачи</a>
+      <a href="#approach">Подход</a>
+      <a href="#solution">Решение</a>
+      <a href="#video">Видео</a>
+      <a href="#results">Результаты</a>
+      <a href="#equipment">Оборудование</a>
+      <a class="btn btn--dark btn--sm" href="podbor.html">Хочу так же</a>
+    </nav>
+
+    <article>
+      <section class="c-sec" id="start">
+        <span class="eyebrow">С чего начинали</span>
+        <h2 class="h2">Интеграторы предлагали 9&nbsp;роботов. Мы посчитали, что хватит пяти</h2>
+        <div class="prose">
+          <p>Первая планировка, которую компании предоставили интеграторы, была рассчитана на&nbsp;<b>9 роботов</b>. Когда мы начали предпроект, моделировать участок и&nbsp;проводить расчёты, количество роботов удалось сократить до&nbsp;<b>пяти</b>.</p>
+          <p>Вместе с&nbsp;клиентом разделили большой проект на&nbsp;две очереди. Первая включает роботизированный комплекс, транспортную систему и&nbsp;паллетообмотчик и&nbsp;запущена в&nbsp;2019&nbsp;году.</p>
+        </div>
+        <div class="phases">
+          <div class="phase">
+            <span class="chip chip--blue" style="justify-self:start">Очередь 1 · запущена в 2019</span>
+            <ul><li>Роботизированный комплекс паллетирования</li><li>Транспортная система</li><li>Паллетообмотчик</li></ul>
+          </div>
+          <div class="phase phase--next">
+            <span class="chip chip--tag" style="justify-self:start">Полное видение проекта</span>
+            <ul><li>Пять роботизированных комплексов паллетирования</li><li>Высокопроизводительный паллетообмотчик и&nbsp;транспорт для паллет</li><li>Контроль качества укладки и&nbsp;этикетирование паллет</li><li>Управление на&nbsp;Profibus, Profinet и&nbsp;IO-Link</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-sec" id="tasks">
+        <span class="eyebrow">Задачи</span>
+        <h2 class="h2">Что нужно было автоматизировать</h2>
+        <div class="tz">
+          <div class="tz__i"><b>60<small> коробок/мин</small></b><span class="small muted">Паллетирование трёх самых производительных линий</span></div>
+          <div class="tz__i"><b>86<small> паллет/час</small></b><span class="small muted">Транспортная упаковка на&nbsp;текущей и&nbsp;новой линиях</span></div>
+          <div class="tz__i"><b>QC<small> паллет</small></b><span class="small muted">Контроль качества упаковки под требования автоматического склада</span></div>
+          <div class="tz__i tz__i--add"><span class="chip chip--new" style="justify-self:start">Добавили в процессе</span><span class="small">Интегрировать термоусадочные машины в&nbsp;текущую линию</span></div>
+          <div class="tz__i tz__i--add"><span class="chip chip--new" style="justify-self:start">Добавили в процессе</span><span class="small">Паллетировать гофроящик и&nbsp;термоусадку одним паллетайзером без переналадки</span></div>
+        </div>
+      </section>
+
+      <section class="c-sec" id="approach">
+        <span class="eyebrow">Подход</span>
+        <h2 class="h2">Недельные итерации и&nbsp;одна площадка для всей команды</h2>
+        <div class="prose"><p>Система крупная, в&nbsp;ней много подсистем и&nbsp;неявных требований. Работали недельными итерациями: показывали промежуточный результат и&nbsp;держали постоянный контакт с&nbsp;рабочей группой клиента. Всю информацию и&nbsp;участников собрали на&nbsp;одной платформе управления проектами, поэтому быстро подстраивались под изменения и&nbsp;учитывали опыт эксплуатации.</p></div>
+        <figure class="quote">
+          <blockquote>«Комплексное видение автоматизации на&nbsp;всех линиях, а&nbsp;потом поэтапная реализация. Так клиент не&nbsp;замораживает бюджет на&nbsp;годы и&nbsp;видит отдачу уже от&nbsp;первой очереди»</blockquote>
+          <figcaption class="small muted">Руководитель проекта, Ready Pack <span class="chip chip--tag" style="margin-left:8px">цитату согласовать</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="c-sec" id="solution">
+        <span class="eyebrow">Решение</span>
+        <h2 class="h2">Что сделали</h2>
+        <div class="scope">
+          <div class="scope__i"><span class="i-box"><svg class="i"><use href="#i-pallet"/></svg></span><span><b>Автоматизация паллетирования</b><span>Робот паллетирует два типа упаковки без переналадки</span></span></div>
+          <div class="scope__i"><span class="i-box"><svg class="i"><use href="#i-truck"/></svg></span><span><b>Транспортная упаковка</b><span>Паллетообмотчик и&nbsp;транспорт для паллет до&nbsp;склада</span></span></div>
+          <div class="scope__i"><span class="i-box"><svg class="i"><use href="#i-shield"/></svg></span><span><b>Контроль качества</b><span>Отбраковка паллет с&nbsp;дефектами укладки до&nbsp;автосклада</span></span></div>
+          <div class="scope__i"><span class="i-box"><svg class="i"><use href="#i-cube"/></svg></span><span><b>3D-моделирование</b><span>Планировка и&nbsp;расчёты, которые сократили 9 роботов до&nbsp;5</span></span></div>
+        </div>
+        <div class="photos">
+          <figure><img src="../assets/img/uv-1.webp" alt="Линия паллетирования" loading="lazy"></figure>
+          <figure><img src="../assets/img/uv-3.webp" alt="Конвейеры" loading="lazy"></figure>
+          <figure><img src="../assets/img/uv-5.webp" alt="Робот за работой" loading="lazy"></figure>
+          <figure><img src="../assets/img/uv-4.webp" alt="Пусконаладка" loading="lazy"></figure>
+          <figure><img src="../assets/img/case-uvelka.webp" alt="Готовые паллеты" loading="lazy"></figure>
+        </div>
+      </section>
+
+      <section class="c-sec" id="video">
+        <span class="eyebrow">Видео</span>
+        <h2 class="h2">Первая очередь в&nbsp;работе</h2>
+        <div class="video">
+          <img src="../assets/img/uv-3.webp" alt="" loading="lazy">
+          <div class="video__play"><span><svg class="i"><use href="#i-play"/></svg></span></div>
+          <span class="video__cap">Видео-демонстрация работы первой очереди · 2:10</span>
+        </div>
+      </section>
+
+      <section class="c-sec" id="results">
+        <span class="eyebrow">Результаты</span>
+        <h2 class="h2">Что получил завод</h2>
+        <div class="tz">
+          <div class="tz__i"><b>+50<small>%</small></b><span class="small muted">продукции в&nbsp;смену на&nbsp;тех же линиях</span></div>
+          <div class="tz__i"><b>200<small> млн ₽/год</small></b><span class="small muted">экономии на&nbsp;персонале, браке и&nbsp;материалах</span></div>
+          <div class="tz__i"><b>−28</b><span class="small muted">грузчиков: люди переведены на&nbsp;другие участки</span></div>
+        </div>
+      </section>
+
+      <section class="c-sec" id="equipment">
+        <span class="eyebrow">Оборудование в проекте</span>
+        <h2 class="h2">Чем это сделано</h2>
+        <div class="used">
+          <a class="rel card card-link" href="catalog-palletizers.html"><img src="../assets/img/pr-robot.webp" alt="" loading="lazy"><b class="h4">Робот-паллетайзер</b><span class="small muted">Паллетирование с&nbsp;нескольких линий</span></a>
+          <a class="rel card card-link" href="#"><img src="../assets/img/pr-wrapper.webp" alt="" loading="lazy"><b class="h4">Паллетообмотчик</b><span class="small muted">Высокопроизводительная обмотка</span></a>
+          <a class="rel card card-link" href="#"><img src="../assets/img/pr-conveyor.webp" alt="" loading="lazy" class="mult"><b class="h4">Транспорт для паллет</b><span class="small muted">Рольганги и&nbsp;конвейеры</span></a>
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+
+<section class="wrap section--tight">
+  <div class="sec-head"><div class="sec-head__l"><span class="eyebrow">Другие проекты</span><h2 class="h2">Похожие задачи</h2></div><a class="btn btn--light btn--arrow" href="#">Все проекты <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a></div>
+  <div class="related related--3">
+    <a class="case card card-link" href="#" style="grid-template-columns:1fr;padding:12px"><div class="case__img"><img src="../assets/img/case-rusagro.webp" alt="" loading="lazy"></div><div class="case__body" style="padding:6px 8px 10px"><b class="h4">«Русагро»: упаковка дой-паков в&nbsp;гофрокороб</b></div></a>
+    <a class="case card card-link" href="#" style="grid-template-columns:1fr;padding:12px"><div class="case__img"><img src="../assets/img/case-kfc.webp" alt="" loading="lazy"></div><div class="case__body" style="padding:6px 8px 10px"><b class="h4">KFC: роботизированный ресторан</b></div></a>
+    <a class="case card card-link" href="#" style="grid-template-columns:1fr;padding:12px"><div class="case__img"><img src="../assets/img/st-robot.webp" alt="" loading="lazy"></div><div class="case__body" style="padding:6px 8px 10px"><b class="h4">«Ставропольмебель»: роботизированный комплекс</b></div></a>
+  </div>
+</section>
+
+<section class="wrap section--tight">
+  <div class="lead-box">
+    <div class="lead-box__l">
+      <span class="eyebrow eyebrow--inv">Аудит производства</span>
+      <h2 class="h2">Посчитаем, сколько роботов нужно вам. Возможно, меньше, чем вы думаете</h2>
+      <p class="small" style="color:#97A1AF">Выезжаем на&nbsp;завод, ищем узкие места и&nbsp;готовим предпроектную оценку с&nbsp;ТКП.</p>
+    </div>
+    <form class="lead-form card" onsubmit="return false">
+      <div class="lead-form__row">
+        <div class="field"><label for="a-company">Компания и город</label><input class="input" id="a-company" placeholder="ООО «Завод», Челябинск"></div>
+        <div class="field"><label for="a-lines">Сколько линий упаковки</label><input class="input" id="a-lines" placeholder="Например, 3"></div>
+      </div>
+      <div class="lead-form__row">
+        <div class="field"><label for="a-name">Имя и должность</label><input class="input" id="a-name" placeholder="Иван, главный инженер"></div>
+        <div class="field"><label for="a-phone">Телефон</label><input class="input" id="a-phone" placeholder="+7 ___ ___-__-__" inputmode="tel"></div>
+      </div>
+      <div class="lead-form__foot"><button class="btn btn--orange">Заказать аудит</button><p class="consent">Нажимая кнопку, вы соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p></div>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="../assets/img/logo.svg" alt="Ready Pack" width="112" height="40">
+        <p>Разрабатываем, производим и запускаем оборудование для конечной упаковки и паллетирования. С 2015 года.</p>
+        <a class="footer__phone" href="tel:+78005503074">8 800 550-30-74</a>
+        <p class="small" style="margin-top:6px">sales@readypack.ru · пн–пт, 9:00–18:00</p>
+        <div class="socials"><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="WhatsApp">WA</a><a href="#" aria-label="YouTube">YT</a><a href="#" aria-label="Rutube">RT</a><a href="#" aria-label="MAX">MX</a></div>
+      </div>
+      <div><h4>Оборудование</h4><ul>
+        <li><a href="catalog-palletizers.html">Паллетайзеры</a></li><li><a href="#">Гофроформирователи</a></li><li><a href="#">Заклейщики коробов</a></li><li><a href="#">Кейспакеры</a></li><li><a href="#">Паллетообмотчики</a></li><li><a href="#">Конвейеры</a></li><li><a href="#">Комплексные линии</a></li></ul></div>
+      <div><h4>Решения</h4><ul>
+        <li><a href="#">Укладка на паллету</a></li><li><a href="#">Групповая упаковка</a></li><li><a href="#">Формирование и заклейка короба</a></li><li><a href="#">Пищевая отрасль</a></li><li><a href="#">Яичное производство</a></li><li><a href="#">Стройматериалы</a></li></ul></div>
+      <div><h4>Сервис</h4><ul>
+        <li><a href="#">Гарантия и ТО</a></li><li><a href="#">Шефмонтаж и пусконаладка</a></li><li><a href="#">Обучение персонала</a></li><li><a href="#">Запчасти</a></li><li><a href="#">ПО Ready Soft</a></li></ul></div>
+      <div><h4>Компания</h4><ul>
+        <li><a href="#">О компании</a></li><li><a href="#">Производство</a></li><li><a href="case-uvelka.html">Проекты</a></li><li><a href="#">Сертификаты</a></li><li><a href="#">СМИ о нас</a></li><li><a href="#">Вакансии</a></li><li><a href="#">Контакты</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 ООО «Рэди Робот» · Челябинск, пр. Ленина, 2р, офис 304</span>
+      <span><a href="#">Политика конфиденциальности</a> · <a href="#">Согласие на обработку данных</a></span>
+      <span>Информация на сайте не является публичной офертой</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="rp-mk" aria-label="Переключатель макета"><span class="rp-mk__g"><b>Вариант</b><a href="../v1/case-uvelka.html" data-v="v1" title="Bento — Светлые bento-плитки, крупный продукт в центре">1</a><a href="../v2/case-uvelka.html" data-v="v2" title="Clean — Белый фон, тонкая крупная типографика, тёмные блоки с синим свечением" class=on aria-current=true>2</a><a href="../v3/case-uvelka.html" data-v="v3" title="Grid — Тёплый светлый фон с инженерной сеткой, огромный жирный заголовок">3</a><a href="../v4/case-uvelka.html" data-v="v4" title="Gradient — Пастельный градиент в фирменных цветах, стеклянная рамка, широкий капс">4</a><a href="../v5/case-uvelka.html" data-v="v5" title="Mono — Монохромный серый, гигантский контурный логотип, стеклянные карточки">5</a><i>Clean</i></span><span class="rp-mk__g rp-mk__p"><a href="index.html">Главная</a><a href="catalog-palletizers.html">Каталог</a><a href="series-pp-pz-cn.html">Серия</a><a href="case-uvelka.html" class=on aria-current=page>Кейс</a><a href="podbor.html">Подбор</a></span><a class="rp-mk__all" href="../index.html" title="Все варианты">⌂</a></nav><script>document.querySelectorAll(".rp-mk [data-v]").forEach(a=>a.addEventListener("click",e=>{const y=Math.round(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*1000);sessionStorage.setItem("rp-y",y);}));(()=>{const y=sessionStorage.getItem("rp-y");if(y!==null){sessionStorage.removeItem("rp-y");addEventListener("load",()=>scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*y/1000));}})();</script>
+</body>
+</html>

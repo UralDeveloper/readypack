@@ -65,8 +65,8 @@ input,select,textarea{font:inherit;color:inherit}
 .btn--dark:hover{background:#000}
 .btn--light{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
 .btn--light:hover{box-shadow:inset 0 0 0 1px var(--ink)}
-.btn--orange{background:var(--orange);color:#fff}
-.btn--orange:hover{background:var(--orange-ink)}
+.btn--orange{background:var(--orange);color:var(--ink)}
+.btn--orange:hover{background:#EA9C55}
 .btn--sm{height:42px;padding:0 18px;font-size:14.5px}
 .btn .ico{width:18px;height:18px}
 .btn--arrow{padding-right:6px}
@@ -171,6 +171,8 @@ textarea.input{height:auto;min-height:110px;padding:14px 18px;resize:vertical}
   .phone{display:none}
   .burger{display:grid}
   .header .btn--cta{display:none}
+  .nav-open .nav{display:flex;flex-direction:column;align-items:stretch;gap:2px;position:fixed;top:72px;left:8px;right:8px;margin:0;padding:10px;background:var(--card);border-radius:var(--r-lg);box-shadow:0 24px 48px -16px rgba(18,26,38,.35);z-index:60}
+  .nav-open .nav a{padding:14px 16px;font-size:17px;justify-content:space-between}
   .footer__top{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer__brand{grid-column:1/-1}
 }

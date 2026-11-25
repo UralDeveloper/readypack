@@ -64,7 +64,7 @@
 <header class="header">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Ready Pack — на главную"><img src="../assets/img/logo.svg" alt="Ready Pack" width="98" height="34"></a>
-    <nav class="nav" aria-label="Основное меню">
+    <nav class="nav" id="main-nav" aria-label="Основное меню">
       <a href="catalog-palletizers.html" data-nav="catalog" class="is-active" aria-current="page">Оборудование<svg class="i chev"><use href="#i-chev"/></svg></a>
       <a href="#" data-nav="solutions">Решения<svg class="i chev"><use href="#i-chev"/></svg></a>
       <a href="case-uvelka.html" data-nav="cases">Проекты</a>
@@ -76,10 +76,17 @@
       <a class="phone" href="tel:+78005503074"><b>8 800 550-30-74</b><span>бесплатно по России</span></a>
       <button class="icon-btn" aria-label="Поиск"><svg class="i i--s"><use href="#i-search"/></svg></button>
       <a class="btn btn--dark btn--sm btn--cta" href="podbor.html">Подобрать оборудование</a>
-      <button class="icon-btn burger" aria-label="Меню"><svg class="i"><use href="#i-menu"/></svg></button>
+      <button class="icon-btn burger" aria-label="Меню" aria-expanded="false" aria-controls="main-nav"><svg class="i"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
+<script>
+(()=>{const b=document.querySelector('.burger'),n=document.getElementById('main-nav');if(!b||!n)return;
+const set=o=>{document.documentElement.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o)};
+b.addEventListener('click',()=>set(!document.documentElement.classList.contains('nav-open')));
+addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
+n.addEventListener('click',e=>{if(e.target.closest('a'))set(false)});})();
+</script>
 
 <main>
 <div class="wrap">
@@ -382,6 +389,6 @@
   </div>
 </footer>
 
-<nav class="rp-mk" aria-label="Переключатель макета"><span class="rp-mk__g"><b>Вариант</b><a href="../v1/series-pp-pz-cn.html" data-v="v1" title="Bento — Светлые bento-плитки, крупный продукт в центре" class=on aria-current=true>1</a><i>Bento</i></span><span class="rp-mk__g rp-mk__p"><a href="index.html">Главная</a><a href="catalog-palletizers.html">Каталог</a><a href="series-pp-pz-cn.html" class=on aria-current=page>Серия</a><a href="case-uvelka.html">Кейс</a><a href="podbor.html">Подбор</a></span><a class="rp-mk__all" href="../index.html" title="Все варианты">⌂</a></nav><script>document.querySelectorAll(".rp-mk [data-v]").forEach(a=>a.addEventListener("click",e=>{const y=Math.round(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*1000);sessionStorage.setItem("rp-y",y);}));(()=>{const y=sessionStorage.getItem("rp-y");if(y!==null){sessionStorage.removeItem("rp-y");addEventListener("load",()=>scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*y/1000));}})();</script>
+<nav class="rp-mk" aria-label="Переключатель макета"><span class="rp-mk__g"><b>Вариант</b><a href="../v1/series-pp-pz-cn.html" data-v="v1" title="Bento — Светлые bento-плитки, крупный продукт в центре" class=on aria-current=true>1</a><a href="../v2/series-pp-pz-cn.html" data-v="v2" title="Clean — Белый фон, тонкая крупная типографика, тёмные блоки с синим свечением">2</a><a href="../v3/series-pp-pz-cn.html" data-v="v3" title="Grid — Тёплый светлый фон с инженерной сеткой, огромный жирный заголовок">3</a><a href="../v4/series-pp-pz-cn.html" data-v="v4" title="Gradient — Пастельный градиент в фирменных цветах, стеклянная рамка, широкий капс">4</a><a href="../v5/series-pp-pz-cn.html" data-v="v5" title="Mono — Монохромный серый, гигантский контурный логотип, стеклянные карточки">5</a><i>Bento</i></span><span class="rp-mk__g rp-mk__p"><a href="index.html">Главная</a><a href="catalog-palletizers.html">Каталог</a><a href="series-pp-pz-cn.html" class=on aria-current=page>Серия</a><a href="case-uvelka.html">Кейс</a><a href="podbor.html">Подбор</a></span><a class="rp-mk__all" href="../index.html" title="Все варианты">⌂</a></nav><script>document.querySelectorAll(".rp-mk [data-v]").forEach(a=>a.addEventListener("click",e=>{const y=Math.round(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*1000);sessionStorage.setItem("rp-y",y);}));(()=>{const y=sessionStorage.getItem("rp-y");if(y!==null){sessionStorage.removeItem("rp-y");addEventListener("load",()=>scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*y/1000));}})();</script>
 </body>
 </html>

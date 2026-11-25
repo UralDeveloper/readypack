@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ru" data-variant="v5">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ready Pack — роботизация конечной упаковки и паллетирования</title>
+<meta name="description" content="Паллетайзеры, гофроформирователи, заклейщики, кейспакеры и комплексные линии собственного производства в Челябинске. Подбор, аудит, запуск и сервис.">
+<meta name="robots" content="noindex">
+<link rel="preload" href="../assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="../assets/css/mk.css">
+<link rel="preload" href="../assets/fonts/v5-golos-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/v5-russo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body class="page-index theme-v5">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></symbol>
+  <symbol id="i-pallet" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="6" rx="1"/><rect x="13" y="4" width="7" height="6" rx="1"/><rect x="8.5" y="10" width="7" height="5" rx="1"/><path d="M3 15h18M5 15v4M12 15v4M19 15v4M3 19h18"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><path d="M5 21h8M9 21v-4"/><circle cx="9" cy="15" r="2"/><path d="m10.5 13.5 4-6"/><circle cx="15.5" cy="6" r="2"/><path d="M17.3 6.8 20 9v3"/><path d="M18.5 12h3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.8 7.5 9 4.3-1.2 7.5-4.5 7.5-9V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V10l5 3V4h3v17z"/><path d="M7 17h2M12 17h2M17 17h1"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5l-9 9a2.1 2.1 0 0 1-3-3l9-9a4 4 0 0 0-2-2Z"/><path d="M14.5 6.5 17 4l3 3-2.5 2.5"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4-5"/><circle cx="12" cy="17" r="1.2"/></symbol>
+  <symbol id="i-weight" viewBox="0 0 24 24"><path d="M6.5 8h11l2.5 12H4z"/><circle cx="12" cy="5" r="2"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 4.6a3.2 3.2 0 0 1 0 6.3M18 14.5a6 6 0 0 1 3 5.5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><path d="m3 15 12-12 6 6L9 21z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3 4 7v10l8 4 8-4V7z"/><path d="M12 11v10M4 7l8 4 8-4"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+</svg>
+
+<header class="header v5h" id="v5h">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Ready Pack — на главную"><img src="../assets/img/logo.svg" alt="Ready Pack" width="98" height="34"></a>
+    <nav class="v5h__nav" aria-label="Основное меню">
+      <a href="catalog-palletizers.html" data-nav="catalog">Оборудование</a>
+      <a href="#" data-nav="solutions">Решения</a>
+      <a href="case-uvelka.html" data-nav="cases">Проекты</a>
+      <a href="#" data-nav="service">Сервис</a>
+      <a href="#" data-nav="company">Компания</a>
+      <a href="#" data-nav="contacts">Контакты</a>
+    </nav>
+    <div class="v5h__r">
+      <a class="v5h__phone" href="tel:+78005503074"><b>8 800 550-30-74</b><span>бесплатно по России</span></a>
+      <a class="btn btn--dark btn--sm btn--arrow v5h__cta" href="podbor.html">Подобрать оборудование <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+      <button class="v5h__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="v5-menu"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="v5h__menu" id="v5-menu" hidden>
+    <div class="wrap">
+      <nav aria-label="Мобильное меню">
+        <a href="catalog-palletizers.html">Оборудование</a>
+        <a href="#">Решения</a>
+        <a href="case-uvelka.html">Проекты</a>
+        <a href="#">Сервис</a>
+        <a href="#">Компания</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <div class="v5h__menu-foot">
+        <a class="v5h__phone" href="tel:+78005503074"><b>8 800 550-30-74</b><span>бесплатно по России</span></a>
+        <a class="btn btn--dark btn--arrow" href="podbor.html">Подобрать оборудование <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+        <p class="xs muted">Производство в Челябинске · работаем по России и СНГ · sales@readypack.ru</p>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+(() => {
+  const h = document.getElementById('v5h'), b = h.querySelector('.v5h__burger'), m = document.getElementById('v5-menu');
+  const set = open => { b.setAttribute('aria-expanded', open); m.hidden = !open; h.classList.toggle('is-open', open); document.documentElement.classList.toggle('v5-lock', open); };
+  b.addEventListener('click', () => set(b.getAttribute('aria-expanded') !== 'true'));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !m.hidden) { set(false); b.focus(); } });
+  m.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+  const sc = () => h.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', sc, {passive: true}); sc();
+})();
+</script>
+
+<main>
+<section class="v5-hero" aria-labelledby="v5-h1">
+  <div class="v5-hero__bg" aria-hidden="true"><i class="v5-grid v5-grid--l"></i><i class="v5-grid v5-grid--r"></i></div>
+  <div class="wrap v5-hero__in">
+    <div class="v5-proof">
+      <span class="v5-avatars">
+        <span><img src="../assets/img/cl-kfc.webp" alt="KFC"></span>
+        <span><img src="../assets/img/cl-uvelka.webp" alt="Увелка"></span>
+        <span><img src="../assets/img/cl-avon.webp" alt="Avon"></span>
+        <span><img src="../assets/img/cl-stavropol.webp" alt="Ставропольмебель"></span>
+        <span class="more">+8</span>
+      </span>
+      <span class="v5-proof__t">Нам доверяют автоматизацию</span>
+      <span class="chip chip--blue v5-glow">с 2015 года</span>
+    </div>
+    <p class="v5-wm" aria-hidden="true"><span data-t="READY PACK">READY PACK</span></p>
+    <div class="v5-hero__copy">
+      <h1 class="v5-h1" id="v5-h1"><span class="v5-spot">Роботизируем</span><br> конечную<br> упаковку</h1>
+      <div class="v5-hero__cta">
+        <a class="btn btn--dark btn--arrow" href="podbor.html">Подобрать оборудование <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+        <div class="v5-fact"><span class="v5-fact__top"><b>от 2 дней</b><span class="chip chip--blue">внедрение</span></span><small>Собираем и&nbsp;тестируем в&nbsp;Челябинске</small></div>
+      </div>
+    </div>
+    <img class="v5-hero__img" src="../assets/img/v5-hero.webp" alt="Консольный паллетайзер Ready Pack с магазином паллет" width="676" height="606">
+    <aside class="v5-hero__card glass" aria-label="Производство">
+      <a class="v5-video" href="#v5-prod">
+        <img src="../assets/img/v5-video.webp" alt="Робот-паллетайзер на испытаниях в цехе Ready Pack" width="720" height="462">
+        <span class="v5-play"><svg class="i"><use href="#i-play"/></svg></span>
+        <span class="v5-video__cap">Видео цеха, 2 мин</span>
+      </a>
+      <p>Каждый комплекс тестируем на&nbsp;площадке 1&nbsp;000&nbsp;м² до&nbsp;отгрузки, поэтому монтаж у&nbsp;вас занимает дни, а&nbsp;не&nbsp;недели.</p>
+      <a class="btn btn--light v5-more" href="#next">Смотреть дальше <svg class="i i--s v5-down"><use href="#i-arrow"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="wrap v5-intro" id="next">
+  <p class="v5-intro__lead">Паллетайзеры, гофроформирователи, заклейщики и&nbsp;комплексные линии собственного производства. Подбираем под ваш продукт, собираем и&nbsp;тестируем в&nbsp;Челябинске, запускаем у&nbsp;вас на&nbsp;линии.</p>
+  <a class="btn btn--light btn--arrow" href="#audit">Заказать аудит производства <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="wrap section--tight">
+  <div class="kpis">
+    <div class="kpi"><b class="num">10<small>лет</small></b><span>проектируем и&nbsp;производим упаковочное оборудование</span></div>
+    <div class="kpi"><b class="num">1&nbsp;000<small>м²</small></b><span>собственное производство и&nbsp;тестовая площадка в&nbsp;Челябинске</span></div>
+    <div class="kpi"><b class="num">+50<small>%</small></b><span>продукции в&nbsp;смену после роботизации паллетирования у&nbsp;«Увелки»</span></div>
+    <div class="kpi"><b class="num">до&nbsp;30<small>%</small></b><span>экономии упаковочных материалов на&nbsp;наших технологиях</span></div>
+    <div class="kpi"><b class="num">24/7</b><span>сервисная поддержка по&nbsp;России и&nbsp;СНГ</span></div>
+  </div>
+</section>
+
+<!-- ============ TASKS ============ -->
+<section class="wrap section">
+  <div class="sec-head">
+    <div class="sec-head__l">
+      <span class="eyebrow">Подбор по задаче</span>
+      <h2 class="h2">Начните с&nbsp;задачи, а&nbsp;оборудование подберём мы</h2>
+    </div>
+    <p class="lead">Опишите, что происходит в&nbsp;конце вашей линии. Инженер предложит состав оборудования, планировку и&nbsp;расчёт окупаемости.</p>
+  </div>
+  <div class="tasks">
+    <a class="task card card-link" href="#"><span class="task__n">01</span><img src="../assets/img/pr-palletizer.webp" alt="" loading="lazy"><b class="h3">Укладка на&nbsp;паллету</b><span class="small muted">Короба, мешки, ящики, ведра, термоусадочные спайки</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    <a class="task card card-link" href="#"><span class="task__n">02</span><img src="../assets/img/pr-casepacker.webp" alt="" loading="lazy"><b class="h3">Групповая упаковка в&nbsp;короб</b><span class="small muted">Дой-паки, бутылки, банки, пачки и&nbsp;флоу-паки</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    <a class="task card card-link" href="#"><span class="task__n">03</span><img src="../assets/img/pr-gofro.webp" alt="" loading="lazy"><b class="h3">Формирование и&nbsp;заклейка короба</b><span class="small muted">От&nbsp;плоской заготовки до&nbsp;заклеенного короба без оператора</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    <a class="task card card-link" href="#"><span class="task__n">04</span><img src="../assets/img/pr-conveyor.webp" alt="" loading="lazy" class="mult"><b class="h3">Транспортировка</b><span class="small muted">Рольганги, ленточные конвейеры, пантографы, накопители</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    <a class="task card card-link" href="#"><span class="task__n">05</span><img src="../assets/img/pr-wrapper.webp" alt="" loading="lazy"><b class="h3">Упаковка паллеты</b><span class="small muted">Обмотка стретч-плёнкой, этикетирование, контроль укладки</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    <a class="task card card-link task--dark" href="#"><span class="task__n">06</span><img src="../assets/img/pr-line.webp" alt="" loading="lazy" class="mult"><b class="h3">Вся линия под ключ</b><span class="small">От&nbsp;выхода продукта до&nbsp;обмотанной паллеты на&nbsp;складе</span><span class="round"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ============ EQUIPMENT ============ -->
+<section class="section equip-sec">
+  <div class="wrap">
+    <p class="v5-ghost" aria-hidden="true">ОБОРУДОВАНИЕ</p>
+    <div class="sec-head">
+      <div class="sec-head__l">
+        <span class="eyebrow">Оборудование Ready Pack</span>
+        <h2 class="h2">Своё оборудование под&nbsp;собственной маркой</h2>
+      </div>
+      <a class="btn btn--light btn--arrow" href="catalog-palletizers.html">Весь каталог <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    </div>
+    <div class="equip">
+      <a class="eq eq--big card card-link" href="catalog-palletizers.html">
+        <div class="eq__top"><span class="chip chip--blue">4 типа паллетайзеров</span><span class="round"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div>
+        <img src="../assets/img/pr-palletizer.webp" alt="Консольный паллетайзер PP-PZ-CN" loading="lazy" class="mult">
+        <div class="eq__body">
+          <b class="h2">Паллетайзеры</b>
+          <div class="eq__tags"><span class="chip chip--tag">Консольные</span><span class="chip chip--tag">На&nbsp;коботе</span><span class="chip chip--tag">На&nbsp;промышленном роботе</span><span class="chip chip--tag">Мобильные</span></div>
+          <dl class="eq__kv"><div><dt>Груз</dt><dd>до 50 кг</dd></div><div><dt>Скорость</dt><dd>до 12 циклов/мин</dd></div><div><dt>Внедрение</dt><dd>от 2 дней</dd></div></dl>
+        </div>
+      </a>
+      <a class="eq card card-link" href="#"><div class="eq__top"><span class="chip chip--tag">Серия CE RS</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-gofro.webp" alt="" loading="lazy"><b class="h3">Гофро&shy;формирователи</b><span class="small muted">до 17 коробов/мин · окупаемость до 1,5 лет</span></a>
+      <a class="eq card card-link" href="#"><div class="eq__top"><span class="chip chip--tag">Скотч 50/75 мм</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-taper.webp" alt="" loading="lazy"><b class="h3">Заклейщики коробов</b><span class="small muted">Закрывают верхние створки и заклеивают скотчем</span></a>
+      <a class="eq card card-link" href="#"><div class="eq__top"><span class="chip chip--new">Новинка</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-casepacker.webp" alt="" loading="lazy"><b class="h3">Кейспакеры</b><span class="small muted">Робот укладывает продукт в&nbsp;гофрокороб</span></a>
+      <a class="eq card card-link" href="#"><div class="eq__top"><span class="chip chip--tag">Стретч-плёнка</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-wrapper.webp" alt="" loading="lazy"><b class="h3">Паллето&shy;обмотчики</b><span class="small muted">Стретч-обмотка паллеты на выходе линии</span></a>
+      <a class="eq card card-link" href="#"><div class="eq__top"><span class="chip chip--tag">Под планировку</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-conveyor.webp" alt="" loading="lazy" class="mult"><b class="h3">Конвейеры и рольганги</b><span class="small muted">Рольганги, ленточные, пантографы под планировку цеха</span></a>
+      <a class="eq eq--wide card card-link" href="#"><div class="eq__top"><span class="chip chip--tag">Под ключ</span><span class="round round--light"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span></div><img src="../assets/img/pr-line.webp" alt="" loading="lazy" class="mult"><div><b class="h3">Комплексные линии</b><span class="small muted">Проектируем всю конечную упаковку: 3D-модель участка, расчёт производительности, поэтапный запуск очередями</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="wrap section">
+  <div class="sec-head">
+    <div class="sec-head__l">
+      <span class="eyebrow">Проекты</span>
+      <h2 class="h2">Результат считаем в&nbsp;тоннах, сменах и&nbsp;рублях</h2>
+    </div>
+    <a class="btn btn--light btn--arrow" href="case-uvelka.html">Все 11 проектов <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+  </div>
+  <div class="cases">
+    <a class="case case--lead card-link" href="case-uvelka.html">
+      <img src="../assets/img/uv-1.webp" alt="Роботизированная линия паллетирования на заводе «Увелка»" loading="lazy">
+      <div class="case__over">
+        <div class="case__tags"><span class="chip chip--tag">Пищевая</span><span class="chip chip--tag">Паллетирование</span><span class="chip chip--tag">2019</span></div>
+        <b class="h2">«Увелка»: роботизированная линия паллетирования коробок с&nbsp;крупами</b>
+        <div class="case__kpis">
+          <div><b class="num">+50%</b><span>продукции в смену</span></div>
+          <div><b class="num">200 млн&nbsp;₽</b><span>экономии в год</span></div>
+          <div><b class="num">−28</b><span>грузчиков</span></div>
+        </div>
+      </div>
+      <span class="round case__go"><svg class="i i--s"><use href="#i-arrow-ur"/></svg></span>
+    </a>
+    <a class="case card card-link" href="#">
+      <div class="case__img"><img src="../assets/img/case-rusagro.webp" alt="" loading="lazy"></div>
+      <div class="case__body">
+        <div class="case__tags"><span class="chip chip--tag">Пищевая</span><span class="chip chip--tag">Групповая упаковка</span></div>
+        <b class="h4">«Русагро»: отбраковка и&nbsp;упаковка дой-паков в&nbsp;гофрокороб</b>
+        <span class="case__kpi">Отбраковка и&nbsp;укладка в&nbsp;короб на&nbsp;одной линии</span>
+      </div>
+    </a>
+    <a class="case card card-link" href="#">
+      <div class="case__img"><img src="../assets/img/case-kfc.webp" alt="" loading="lazy"></div>
+      <div class="case__body">
+        <div class="case__tags"><span class="chip chip--tag">HoReCa</span><span class="chip chip--tag">Роботизация</span></div>
+        <b class="h4">KFC: первый в&nbsp;России роботизированный ресторан</b>
+        <span class="case__kpi"><b class="num">430</b> заказов в день · <b class="num">170</b> в час</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ PRODUCTION ============ -->
+<section class="section prod-sec" id="v5-prod">
+  <div class="wrap prod">
+    <div class="prod__copy">
+      <span class="eyebrow">Производство в Челябинске</span>
+      <h2 class="h2">Проектируем, варим, собираем и&nbsp;отлаживаем сами</h2>
+      <p class="lead">Инженерно-конструкторский отдел и&nbsp;цех на&nbsp;1&nbsp;000&nbsp;м². Комплекс запускаем и&nbsp;отлаживаем на&nbsp;своей площадке на&nbsp;вашем продукте, а&nbsp;к&nbsp;вам привозим уже работающую систему.</p>
+      <ul class="checks">
+        <li><svg class="i i--s"><use href="#i-check"/></svg>3D-моделирование участка и&nbsp;виртуальная отладка до&nbsp;производства</li>
+        <li><svg class="i i--s"><use href="#i-check"/></svg>Комплектующие FESTO, SMC, Schneider Electric, Omron, Delta</li>
+        <li><svg class="i i--s"><use href="#i-check"/></svg>Панели управления на&nbsp;русском, переналадка без&nbsp;программиста</li>
+        <li><svg class="i i--s"><use href="#i-check"/></svg>Запчасти и&nbsp;сервисный инженер в&nbsp;России, а&nbsp;не&nbsp;за&nbsp;границей</li>
+      </ul>
+      <div class="hero__cta"><a class="btn btn--dark" href="#">Приехать на производство</a><a class="link" href="#"><svg class="i i--s"><use href="#i-play"/></svg>Видео цеха, 2 мин</a></div>
+    </div>
+    <div class="prod__media">
+      <figure class="pm pm--a"><img src="../assets/img/st-engineer.webp" alt="Инженер Ready Pack настраивает робота" loading="lazy"></figure>
+      <figure class="pm pm--b"><img src="../assets/img/st-robot.webp" alt="Роботизированная ячейка на испытаниях" loading="lazy"></figure>
+      <figure class="pm pm--c"><img src="../assets/img/st-3d.webp" alt="3D-модель линии упаковки" loading="lazy" class="mult"><figcaption class="xs">3D-модель линии до&nbsp;начала производства</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="wrap section">
+  <div class="sec-head">
+    <div class="sec-head__l">
+      <span class="eyebrow">Как мы работаем</span>
+      <h2 class="h2">От&nbsp;опросного листа до&nbsp;запуска</h2>
+    </div>
+    <p class="lead">Берём на&nbsp;себя только те&nbsp;сроки и&nbsp;параметры производительности, которые реально выполним. Они фиксируются в&nbsp;договоре.</p>
+  </div>
+  <ol class="steps">
+    <li class="step"><span class="step__n">01</span><b class="h4">Задача и&nbsp;ТЗ</b><p class="small muted">Помогаем сформулировать ТЗ, если готового документа нет.</p></li>
+    <li class="step"><span class="step__n">02</span><b class="h4">Аудит производства</b><p class="small muted">Выезжаем, ищем узкие места, считаем потенциал роботизации.</p></li>
+    <li class="step"><span class="step__n">03</span><b class="h4">Проект и&nbsp;ТКП</b><p class="small muted">3D-модель участка, состав оборудования, окупаемость.</p></li>
+    <li class="step"><span class="step__n">04</span><b class="h4">Производство и&nbsp;тест</b><p class="small muted">Собираем и&nbsp;отлаживаем на&nbsp;нашей площадке, при&nbsp;необходимости на&nbsp;вашем продукте.</p></li>
+    <li class="step"><span class="step__n">05</span><b class="h4">Монтаж и&nbsp;запуск</b><p class="small muted">Доставка, шефмонтаж, пусконаладка, обучение персонала.</p></li>
+    <li class="step"><span class="step__n">06</span><b class="h4">Сервис</b><p class="small muted">Гарантия 12 мес., ТО, запчасти, переналадка под новый продукт.</p></li>
+  </ol>
+</section>
+
+<!-- ============ INDUSTRIES + CLIENTS ============ -->
+<section class="wrap section--tight">
+  <div class="trust panel">
+    <div class="trust__ind">
+      <span class="eyebrow">Отрасли</span>
+      <h3 class="h3">Работаем там, где упаковывают тоннами</h3>
+      <div class="ind">
+        <a href="#" class="ind__i"><span>Пищевая</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+        <a href="#" class="ind__i"><span>Яичное производство</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+        <a href="#" class="ind__i"><span>Напитки</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+        <a href="#" class="ind__i"><span>Косметика и&nbsp;бытовая химия</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+        <a href="#" class="ind__i"><span>Стройматериалы</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+        <a href="#" class="ind__i"><span>Мебель</span><svg class="i i--s"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="trust__clients">
+      <span class="eyebrow">Нам доверяют автоматизацию</span>
+      <div class="logos">
+        <span><img src="../assets/img/cl-kfc.webp" alt="KFC" loading="lazy"></span>
+        <span><img src="../assets/img/cl-uvelka.webp" alt="Увелка" loading="lazy"></span>
+        <span><img src="../assets/img/cl-3.webp" alt="Русагро" loading="lazy"></span>
+        <span><img src="../assets/img/cl-avon.webp" alt="Avon" loading="lazy"></span>
+        <span><img src="../assets/img/cl-esab.webp" alt="ESAB" loading="lazy"></span>
+        <span><img src="../assets/img/cl-ssk.webp" alt="ССК" loading="lazy"></span>
+        <span><img src="../assets/img/cl-logo.webp" alt="SICK" loading="lazy"></span>
+        <span><img src="../assets/img/cl-emis.webp" alt="ЭМИС" loading="lazy"></span>
+        <span><img src="../assets/img/cl-4.webp" alt="Сыробогатов" loading="lazy"></span>
+        <span><img src="../assets/img/cl-5.webp" alt="Чепфа" loading="lazy"></span>
+        <span><img src="../assets/img/cl-stavropol.webp" alt="Ставропольмебель" loading="lazy"></span>
+        <span><img src="../assets/img/cl-2.webp" alt="НТЦ «Приводная техника»" loading="lazy"></span>
+      </div>
+      <div class="reviews">
+        <figure class="review card">
+          <blockquote>«Проработали несколько концептуальных решений и&nbsp;выбрали оптимальное. Это выгодно отличает их от&nbsp;интеграторов, которые предлагают только типовые решения»</blockquote>
+          <figcaption class="xs muted">SICK Sensor Intelligence · <a class="link xs" href="#">Письмо, PDF</a></figcaption>
+        </figure>
+        <figure class="review card">
+          <blockquote>«Надёжный партнёр и&nbsp;эксперт в&nbsp;автоматизации конечной упаковки и&nbsp;паллетирования»</blockquote>
+          <figcaption class="xs muted">А.&nbsp;А.&nbsp;Буланов, НТЦ «Приводная техника» · <a class="link xs" href="#">Письмо, PDF</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE ============ -->
+<section class="wrap section">
+  <div class="service">
+    <div class="service__l">
+      <span class="eyebrow">Сервис</span>
+      <h2 class="h2">Оборудование должно работать, а&nbsp;не&nbsp;ждать запчасть из&nbsp;Европы</h2>
+      <a class="btn btn--dark btn--arrow" href="#">Сервисные условия <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+    </div>
+    <div class="service__grid">
+      <div class="sv tile"><span class="i-box"><svg class="i"><use href="#i-shield"/></svg></span><b class="h4">Гарантия 12 мес.</b><span class="small muted">Расширенная до&nbsp;2&nbsp;лет и&nbsp;сервисный контракт на&nbsp;весь срок</span></div>
+      <div class="sv tile"><span class="i-box"><svg class="i"><use href="#i-wrench"/></svg></span><b class="h4">Шефмонтаж и&nbsp;пусконаладка</b><span class="small muted">На&nbsp;вашей площадке, по&nbsp;всей России и&nbsp;СНГ</span></div>
+      <div class="sv tile"><span class="i-box"><svg class="i"><use href="#i-users"/></svg></span><b class="h4">Обучение персонала</b><span class="small muted">Операторы и&nbsp;наладчики, на&nbsp;месте эксплуатации</span></div>
+      <div class="sv tile"><span class="i-box"><svg class="i"><use href="#i-cpu"/></svg></span><b class="h4">ПО Ready Soft</b><span class="small muted">Новые схемы укладки и&nbsp;переналадка под новый продукт</span></div>
+      <div class="sv tile"><span class="i-box"><svg class="i"><use href="#i-box"/></svg></span><b class="h4">Запчасти</b><span class="small muted">Для нашего оборудования и&nbsp;линий других производителей</span></div>
+      <div class="sv tile sv--o"><span class="i-box i-box--o"><svg class="i"><use href="#i-robot"/></svg></span><b class="h4">Чужое оборудование</b><span class="small muted">Обслуживаем линии других производителей</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section class="wrap section--tight" id="audit">
+  <div class="lead-box">
+    <div class="lead-box__l">
+      <span class="eyebrow eyebrow--inv">Подбор оборудования</span>
+      <h2 class="h2">Расскажите о&nbsp;продукте. Инженер ответит в&nbsp;течение рабочего дня</h2>
+      <div class="person">
+        <img src="../assets/img/chukin.webp" alt="" class="person__img">
+        <div><b>Денис Чукин</b><span class="small">Руководитель отдела продаж, эксперт по упаковочному оборудованию</span></div>
+      </div>
+      <div class="lead-box__contacts">
+        <a href="tel:+78005503074"><svg class="i i--s"><use href="#i-phone"/></svg>8 800 550-30-74</a>
+        <a href="mailto:sales@readypack.ru"><svg class="i i--s"><use href="#i-mail"/></svg>sales@readypack.ru</a>
+      </div>
+    </div>
+    <form class="lead-form card" onsubmit="return false">
+      <div class="field"><label>Что нужно сделать</label>
+        <div class="seg">
+          <input type="radio" name="t" id="t1" checked><label for="t1">Паллетировать</label>
+          <input type="radio" name="t" id="t2"><label for="t2">Упаковать в короб</label>
+          <input type="radio" name="t" id="t3"><label for="t3">Собрать короб</label>
+          <input type="radio" name="t" id="t4"><label for="t4">Линия целиком</label>
+          <input type="radio" name="t" id="t5"><label for="t5">Аудит</label>
+        </div>
+      </div>
+      <div class="lead-form__row">
+        <div class="field"><label for="f-prod">Продукт и тара</label><input class="input" id="f-prod" placeholder="Например, крупа в коробах по 12 кг"></div>
+        <div class="field"><label for="f-speed">Скорость линии</label><input class="input" id="f-speed" placeholder="шт/мин или т/смену"></div>
+      </div>
+      <div class="lead-form__row">
+        <div class="field"><label for="f-name">Имя и компания</label><input class="input" id="f-name" placeholder="Иван, ООО «Завод»"></div>
+        <div class="field"><label for="f-phone">Телефон</label><input class="input" id="f-phone" placeholder="+7 ___ ___-__-__" inputmode="tel"></div>
+      </div>
+      <div class="lead-form__foot">
+        <button class="btn btn--orange">Отправить инженеру</button>
+        <p class="consent">Нажимая кнопку, вы соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <p class="v5-foot-wm" aria-hidden="true"><span>READY PACK</span></p>
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="../assets/img/logo-white.svg" alt="Ready Pack" width="112" height="40">
+        <p>Разрабатываем, производим и запускаем оборудование для конечной упаковки и паллетирования. С 2015 года.</p>
+        <a class="footer__phone" href="tel:+78005503074">8 800 550-30-74</a>
+        <p class="small" style="margin-top:6px">sales@readypack.ru · пн–пт, 9:00–18:00</p>
+        <div class="socials"><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="WhatsApp">WA</a><a href="#" aria-label="YouTube">YT</a><a href="#" aria-label="Rutube">RT</a><a href="#" aria-label="MAX">MX</a></div>
+      </div>
+      <div><h4>Оборудование</h4><ul>
+        <li><a href="catalog-palletizers.html">Паллетайзеры</a></li><li><a href="#">Гофроформирователи</a></li><li><a href="#">Заклейщики коробов</a></li><li><a href="#">Кейспакеры</a></li><li><a href="#">Паллетообмотчики</a></li><li><a href="#">Конвейеры</a></li><li><a href="#">Комплексные линии</a></li></ul></div>
+      <div><h4>Решения</h4><ul>
+        <li><a href="#">Укладка на паллету</a></li><li><a href="#">Групповая упаковка</a></li><li><a href="#">Формирование и заклейка короба</a></li><li><a href="#">Пищевая отрасль</a></li><li><a href="#">Яичное производство</a></li><li><a href="#">Стройматериалы</a></li></ul></div>
+      <div><h4>Сервис</h4><ul>
+        <li><a href="#">Гарантия и ТО</a></li><li><a href="#">Шефмонтаж и пусконаладка</a></li><li><a href="#">Обучение персонала</a></li><li><a href="#">Запчасти</a></li><li><a href="#">ПО Ready Soft</a></li></ul></div>
+      <div><h4>Компания</h4><ul>
+        <li><a href="#">О компании</a></li><li><a href="#">Производство</a></li><li><a href="case-uvelka.html">Проекты</a></li><li><a href="#">Сертификаты</a></li><li><a href="#">СМИ о нас</a></li><li><a href="#">Вакансии</a></li><li><a href="#">Контакты</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 ООО «Рэди Робот» · Челябинск, пр. Ленина, 2р, офис 304</span>
+      <span><a href="#">Политика конфиденциальности</a> · <a href="#">Согласие на обработку данных</a></span>
+      <span>Информация на сайте не является публичной офертой</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="rp-mk" aria-label="Переключатель макета"><span class="rp-mk__g"><b>Вариант</b><a href="../v1/index.html" data-v="v1" title="Bento — Светлые bento-плитки, крупный продукт в центре">1</a><a href="../v2/index.html" data-v="v2" title="Clean — Белый фон, тонкая крупная типографика, тёмные блоки с синим свечением">2</a><a href="../v3/index.html" data-v="v3" title="Grid — Тёплый светлый фон с инженерной сеткой, огромный жирный заголовок">3</a><a href="../v4/index.html" data-v="v4" title="Gradient — Пастельный градиент в фирменных цветах, стеклянная рамка, широкий капс">4</a><a href="../v5/index.html" data-v="v5" title="Mono — Монохромный серый, гигантский контурный логотип, стеклянные карточки" class=on aria-current=true>5</a><i>Mono</i></span><span class="rp-mk__g rp-mk__p"><a href="index.html" class=on aria-current=page>Главная</a><a href="catalog-palletizers.html">Каталог</a><a href="series-pp-pz-cn.html">Серия</a><a href="case-uvelka.html">Кейс</a><a href="podbor.html">Подбор</a></span><a class="rp-mk__all" href="../index.html" title="Все варианты">⌂</a></nav><script>document.querySelectorAll(".rp-mk [data-v]").forEach(a=>a.addEventListener("click",e=>{const y=Math.round(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*1000);sessionStorage.setItem("rp-y",y);}));(()=>{const y=sessionStorage.getItem("rp-y");if(y!==null){sessionStorage.removeItem("rp-y");addEventListener("load",()=>scrollTo(0,(document.documentElement.scrollHeight-innerHeight)*y/1000));}})();</script>
+</body>
+</html>
