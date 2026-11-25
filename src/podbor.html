@@ -1,0 +1,158 @@
+<!-- title: Подбор оборудования для конечной упаковки — Ready Pack -->
+<!-- desc: Ответьте на 6 вопросов о продукте и линии: подберём паллетайзер или линию упаковки и посчитаем окупаемость. -->
+<!-- nav: none -->
+
+<div class="wrap">
+  <nav class="crumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span>Подбор оборудования</span></nav>
+  <div class="cat-head" style="padding-top:20px">
+    <div>
+      <span class="eyebrow">Подбор за 2 минуты</span>
+      <h1 class="h1" style="font-size:clamp(36px,4.6vw,64px)">Подберём оборудование под ваш продукт</h1>
+    </div>
+    <p class="lead" style="max-width:44ch">Ответьте на&nbsp;шесть вопросов. Справа сразу появится подходящее решение и&nbsp;примерная окупаемость. Инженер проверит расчёт и&nbsp;пришлёт ТКП.</p>
+  </div>
+
+  <div class="pb">
+    <form class="pb-form" id="pb" onsubmit="return false">
+      <div class="progress" aria-label="Заполнено"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><span id="pb-prog">3 из 6</span></div>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>01</em><b>Что упаковываете на&nbsp;паллету?</b></legend>
+        <div class="pack-types">
+          <input type="radio" name="pack" id="pk-box" value="box" checked>
+          <label for="pk-box"><svg viewBox="0 0 48 48"><path d="M8 16 24 8l16 8v18l-16 8-16-8z"/><path d="M8 16l16 8 16-8M24 24v18"/><path d="m16 12 16 8v6"/></svg>Гофрокороб</label>
+          <input type="radio" name="pack" id="pk-shrink" value="shrink">
+          <label for="pk-shrink"><svg viewBox="0 0 48 48"><rect x="8" y="14" width="32" height="22" rx="5"/><path d="M14 14v22M21 14v22M27 14v22M34 14v22"/><path d="M8 20h32"/></svg>Термоусадка</label>
+          <input type="radio" name="pack" id="pk-bag" value="bag">
+          <label for="pk-bag"><svg viewBox="0 0 48 48"><path d="M10 14c4-2 24-2 28 0l2 22c-6 3-26 3-32 0z"/><path d="M13 10h22l3 4H10z"/></svg>Мешок</label>
+          <input type="radio" name="pack" id="pk-can" value="can">
+          <label for="pk-can"><svg viewBox="0 0 48 48"><path d="M13 12h22l-2 28H15z"/><path d="M11 12h26M17 8h14v4"/><path d="M15 22h18"/></svg>Ведро, канистра</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>02</em><b>Параметры упаковки</b></legend>
+        <div class="q-grid">
+          <div class="field"><label for="pb-w">Вес места</label><div class="input-unit"><input class="input" id="pb-w" value="18" inputmode="decimal"><span>кг</span></div></div>
+          <div class="field"><label for="pb-l">Длина × ширина</label><div class="input-unit"><input class="input" id="pb-l" value="400 × 300"><span>мм</span></div></div>
+          <div class="field"><label for="pb-h">Высота</label><div class="input-unit"><input class="input" id="pb-h" value="250" inputmode="numeric"><span>мм</span></div></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>03</em><b>Производительность линии</b></legend>
+        <div class="slider">
+          <div class="slider__v"><span>Коробок в минуту</span><b id="sp-v" style="color:var(--ink);font-size:15px">12</b></div>
+          <input type="range" id="pb-speed" min="2" max="60" value="12" aria-label="Коробок в минуту">
+          <div class="slider__v"><span>2</span><span>30</span><span>60</span></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>04</em><b>Сколько линий подаёт продукт на&nbsp;паллетирование?</b></legend>
+        <div class="seg" role="radiogroup">
+          <input type="radio" name="lines" id="ln1" value="1" checked><label for="ln1">Одна</label>
+          <input type="radio" name="lines" id="ln2" value="2"><label for="ln2">Две</label>
+          <input type="radio" name="lines" id="ln3" value="3"><label for="ln3">Три и больше</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>05</em><b>Что ещё нужно автоматизировать?</b></legend>
+        <div class="chips-check">
+          <label class="chip chip--check"><input type="checkbox"> Формирование гофрокороба</label>
+          <label class="chip chip--check"><input type="checkbox"> Заклейка скотчем</label>
+          <label class="chip chip--check"><input type="checkbox" checked> Обмотка паллет</label>
+          <label class="chip chip--check"><input type="checkbox"> Транспорт до склада</label>
+          <label class="chip chip--check"><input type="checkbox"> Этикетирование</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend class="q__h"><em>06</em><b>Куда прислать подбор и&nbsp;ТКП?</b></legend>
+        <div class="q-grid">
+          <div class="field"><label for="pb-name">Имя</label><input class="input" id="pb-name" placeholder="Иван"></div>
+          <div class="field"><label for="pb-phone">Телефон</label><input class="input" id="pb-phone" placeholder="+7 ___ ___-__-__" inputmode="tel"></div>
+          <div class="field"><label for="pb-co">Компания</label><input class="input" id="pb-co" placeholder="ООО «Завод»"></div>
+        </div>
+      </fieldset>
+
+      <div class="pb-nav">
+        <p class="consent" style="max-width:40ch">Нажимая кнопку, вы соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+        <button class="btn btn--dark btn--arrow">Получить подбор и ТКП <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></button>
+      </div>
+    </form>
+
+    <aside class="pb-side" aria-label="Результат подбора">
+      <div class="match">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><span class="eyebrow">Подходит вам</span><span class="match__fit"><i></i><span id="m-fit">Совпадение 94%</span></span></div>
+        <div class="match__img"><img id="m-img" src="img/pr-palletizer.webp" alt="" class="mult"></div>
+        <div>
+          <b class="h3" id="m-name">Консольный паллетайзер <span style="white-space:nowrap">PP-PZ-CN</span></b>
+          <p class="small muted" id="m-why" style="margin-top:6px">Одна линия, вес места до&nbsp;30&nbsp;кг и&nbsp;до&nbsp;12 циклов в&nbsp;минуту: консольный паллетайзер справится без робота и&nbsp;обойдётся дешевле.</p>
+        </div>
+        <a class="btn btn--light btn--arrow" id="m-link" href="series-pp-pz-cn.html">Смотреть серию <span class="dot"><svg class="i i--s"><use href="#i-arrow"/></svg></span></a>
+      </div>
+
+      <div class="calc" id="calc">
+        <span class="eyebrow eyebrow--inv">Калькулятор окупаемости</span>
+        <div class="calc__row"><label for="c-ppl">Заменяет людей в смену <b id="c-ppl-v">2</b></label><input type="range" id="c-ppl" min="1" max="8" value="2"></div>
+        <div class="calc__row"><label for="c-sh">Смен в сутки <b id="c-sh-v">2</b></label><input type="range" id="c-sh" min="1" max="3" value="2"></div>
+        <div class="calc__row"><label for="c-sal">Зарплата сотрудника <b id="c-sal-v">80 000 ₽</b></label><input type="range" id="c-sal" min="40000" max="150000" step="5000" value="80000"></div>
+        <div class="calc__row"><label for="c-pr">Стоимость решения <b id="c-pr-v">10 млн ₽</b></label><input type="range" id="c-pr" min="3" max="60" value="10"></div>
+        <div class="calc__out">
+          <div><b id="c-save">5,4 млн</b><span>экономия ФОТ в год, ₽</span></div>
+          <div><b class="o" id="c-pay">22 мес.</b><span>срок окупаемости</span></div>
+        </div>
+        <p class="xs">Оценка без учёта брака, простоев и&nbsp;роста выпуска. Учтены страховые взносы 30%. Точный расчёт — в&nbsp;ТКП.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="wrap section">
+  <div class="sec-head"><div class="sec-head__l"><span class="eyebrow">Что дальше</span><h2 class="h2">От заявки до&nbsp;запуска</h2></div></div>
+  <ol class="steps">
+    <li class="step"><span class="step__n">01</span><b class="h4">Звонок инженера</b><p class="small muted">Уточняем продукт, линию и&nbsp;помещение</p></li>
+    <li class="step"><span class="step__n">02</span><b class="h4">ТКП и 3D-планировка</b><p class="small muted">Показываем, как оборудование встанет в&nbsp;цех</p></li>
+    <li class="step"><span class="step__n">03</span><b class="h4">Тест на продукте</b><p class="small muted">Проверяем захват и&nbsp;схему укладки на&nbsp;ваших образцах</p></li>
+    <li class="step"><span class="step__n">04</span><b class="h4">Производство</b><p class="small muted">Собираем на&nbsp;своей площадке в&nbsp;Челябинске</p></li>
+    <li class="step"><span class="step__n">05</span><b class="h4">Приёмка</b><p class="small muted">Испытания у&nbsp;нас, затем монтаж у&nbsp;вас</p></li>
+    <li class="step"><span class="step__n">06</span><b class="h4">Сервис</b><p class="small muted">Обучение персонала и&nbsp;поддержка 24/7</p></li>
+  </ol>
+</section>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fmt = n => n.toLocaleString('ru-RU');
+  const mln = n => (n / 1e6).toLocaleString('ru-RU', {maximumFractionDigits: 1}) + ' млн';
+  const calc = () => {
+    const ppl = +$('c-ppl').value, sh = +$('c-sh').value, sal = +$('c-sal').value, pr = +$('c-pr').value;
+    $('c-ppl-v').textContent = ppl; $('c-sh-v').textContent = sh;
+    $('c-sal-v').textContent = fmt(sal) + ' ₽'; $('c-pr-v').textContent = pr + ' млн ₽';
+    const save = ppl * sh * sal * 1.3 * 12;
+    const months = Math.ceil(pr * 1e6 / save * 12);
+    $('c-save').textContent = mln(save);
+    $('c-pay').textContent = months > 36 ? (months / 12).toFixed(1).replace('.', ',') + ' года' : months + ' мес.';
+  };
+  ['c-ppl', 'c-sh', 'c-sal', 'c-pr'].forEach(id => $(id).addEventListener('input', calc));
+
+  const match = () => {
+    const w = parseFloat($('pb-w').value.replace(',', '.')) || 0;
+    const sp = +$('pb-speed').value;
+    const lines = +document.querySelector('input[name=lines]:checked').value;
+    $('sp-v').textContent = sp;
+    let m;
+    if (lines === 1 && w <= 50 && sp <= 12) m = {name: 'Консольный паллетайзер <span style="white-space:nowrap">PP-PZ-CN</span>', img: 'pr-palletizer', fit: 94, link: 'series-pp-pz-cn.html', link_t: 'Смотреть серию',
+      why: `Одна линия, вес места ${w} кг и ${sp} циклов в минуту: консольный паллетайзер справится без робота и обойдётся дешевле.`};
+    else m = {name: 'Робот-паллетайзер', img: 'pr-robot', fit: 90, link: 'catalog-palletizers.html', link_t: 'Смотреть роботов',
+      why: lines > 1 ? 'Несколько линий: один робот соберёт паллеты с каждой линии в своей зоне.' : `${sp} циклов в минуту или вес ${w} кг: нужна скорость и грузоподъёмность промышленного робота.`};
+    $('m-name').innerHTML = m.name; $('m-why').textContent = m.why;
+    $('m-img').src = `img/${m.img}.webp`; $('m-fit').textContent = `Совпадение ${m.fit}%`;
+    $('m-link').href = m.link; $('m-link').firstChild.textContent = m.link_t + ' ';
+  };
+  $('pb').addEventListener('input', match);
+  match(); calc();
+})();
+</script>

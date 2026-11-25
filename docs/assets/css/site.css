@@ -1,0 +1,184 @@
+/* Ready Pack — макет нового сайта · CoderUX · 2026
+   Светлая инженерная тема: серые плитки, крупные рендеры оборудования,
+   фирменные синий и оранжевый Ready Pack как акценты. */
+
+@font-face{font-family:"Onest";src:url(../fonts/onest-cyrillic.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";src:url(../fonts/onest-latin.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --bg:#E4E6E9;
+  --panel:#EEEFF1;
+  --tile:#F6F7F8;
+  --card:#FFFFFF;
+  --line:#D9DCE0;
+  --line-soft:#E6E8EB;
+  --ink:#121A26;
+  --ink-2:#3A4352;
+  --muted:#6B7381;
+  --faint:#9BA2AD;
+  --blue:#2553A1;
+  --blue-deep:#173A78;
+  --blue-tint:#E3EAF6;
+  --orange:#E08A3C;
+  --orange-ink:#B5631C;
+  --orange-tint:#F8EADB;
+  --ok:#2F8F5B;
+  --r-xl:32px;--r-lg:24px;--r-md:18px;--r-sm:12px;
+  --wrap:1360px;
+  --gut:clamp(16px,2.4vw,28px);
+  --shadow:0 1px 0 rgba(18,26,38,.04),0 8px 24px -12px rgba(18,26,38,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 0}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.num,.tab{font-variant-numeric:tabular-nums}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.section{padding-block:clamp(56px,7vw,104px)}
+.section--tight{padding-block:clamp(40px,5vw,72px)}
+
+/* ---------- Type ---------- */
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--orange);flex:none}
+.h1{font-size:clamp(40px,5.6vw,76px);line-height:.98;letter-spacing:-.035em;font-weight:600}
+.h2{font-size:clamp(30px,3.6vw,50px);line-height:1.04;letter-spacing:-.03em;font-weight:600}
+.h3{font-size:clamp(21px,1.8vw,26px);line-height:1.15;letter-spacing:-.02em;font-weight:600}
+.h4{font-size:18px;line-height:1.25;letter-spacing:-.01em;font-weight:600}
+.h1,.h2,.h3,.h4{display:block}
+.lead{font-size:clamp(17px,1.35vw,19px);line-height:1.55;color:var(--ink-2);max-width:60ch}
+.muted{color:var(--muted)}
+.small{font-size:14px;line-height:1.5}
+.xs{font-size:12.5px;line-height:1.45}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(28px,3.4vw,48px);flex-wrap:wrap}
+.sec-head .lead{max-width:44ch}
+.sec-head__l{display:grid;gap:16px;max-width:700px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15.5px;white-space:nowrap;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.btn--dark{background:var(--ink);color:#fff}
+.btn--dark:hover{background:#000}
+.btn--light{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn--light:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.btn--orange{background:var(--orange);color:#fff}
+.btn--orange:hover{background:var(--orange-ink)}
+.btn--sm{height:42px;padding:0 18px;font-size:14.5px}
+.btn .ico{width:18px;height:18px}
+.btn--arrow{padding-right:6px}
+.btn--arrow .dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--ink);margin-left:4px}
+.btn--light.btn--arrow .dot{background:var(--ink);color:#fff}
+.btn--sm.btn--arrow .dot{width:32px;height:32px}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--ink);border-bottom:1px solid currentColor;padding-bottom:2px}
+.link:hover{color:var(--blue)}
+.round{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;flex:none;transition:transform .2s}
+.round--light{background:var(--card);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+a:hover > .round, .card-link:hover .round{transform:rotate(-45deg)}
+
+/* ---------- Header ---------- */
+.topbar{font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:24px}
+.topbar__l,.topbar__r{display:flex;gap:24px;align-items:center}
+.topbar a:hover{color:var(--ink)}
+.status{display:inline-flex;align-items:center;gap:8px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(47,143,91,.18)}
+
+.header{position:sticky;top:0;z-index:50;background:rgba(228,230,233,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px)}
+.header .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.logo{display:flex;align-items:center;flex:none}
+.logo img{height:34px;width:auto}
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav a{padding:10px 14px;border-radius:999px;font-size:15px;font-weight:500;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+.nav a:hover{background:var(--panel);color:var(--ink)}
+.nav a.is-active{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.nav .chev{width:12px;height:12px;opacity:.5}
+.header__r{margin-left:auto;display:flex;align-items:center;gap:14px}
+.phone{display:grid;line-height:1.2;text-align:right}
+.phone b{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.phone span{font-size:12px;color:var(--muted)}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.icon-btn:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.burger{display:none}
+
+/* ---------- Generic surfaces ---------- */
+.panel{background:var(--panel);border-radius:var(--r-xl)}
+.tile{background:var(--tile);border-radius:var(--r-lg)}
+.card{background:var(--card);border-radius:var(--r-lg)}
+.chip{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px;border-radius:999px;background:var(--card);font-size:14px;font-weight:500;color:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line-soft);white-space:nowrap}
+.chip--on{background:var(--ink);color:#fff;box-shadow:none}
+.chip--tag{height:26px;padding:0 10px;font-size:12.5px;background:var(--tile);box-shadow:none}
+.chip--new{background:var(--orange-tint);color:var(--orange-ink);box-shadow:none;font-weight:600}
+.chip--blue{background:var(--blue-tint);color:var(--blue-deep);box-shadow:none}
+.chip .count{color:var(--faint);font-weight:500}
+.chip--on .count{color:rgba(255,255,255,.55)}
+
+.crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);padding:20px 0 0}
+.crumbs a:hover{color:var(--ink)}
+.crumbs span[aria-hidden]{opacity:.5}
+
+/* ---------- Icons ---------- */
+.i{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.i--s{width:18px;height:18px}
+.i-box{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--tile);color:var(--blue);flex:none}
+.i-box--o{color:var(--orange-ink);background:var(--orange-tint)}
+
+/* ---------- Spec rows (like reference) ---------- */
+.specs{display:grid;gap:4px}
+.spec{display:flex;align-items:center;gap:14px;padding:12px 4px}
+.spec + .spec{border-top:1px solid var(--line-soft)}
+.spec b{display:block;font-size:17px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.2}
+.spec span{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--ink);color:#C9CED6;margin-top:clamp(40px,5vw,72px);border-radius:var(--r-xl) var(--r-xl) 0 0}
+.footer .wrap{padding-top:72px;padding-bottom:32px}
+.footer__top{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:40px}
+.footer h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:16px;letter-spacing:.02em}
+.footer ul{list-style:none;display:grid;gap:10px;font-size:14.5px}
+.footer a:hover{color:#fff}
+.footer__brand img{height:40px;margin-bottom:24px}
+.footer__brand p{font-size:14.5px;max-width:34ch;color:#9AA3B0}
+.footer__phone{font-size:26px;color:#fff;font-weight:600;letter-spacing:-.02em;display:block;margin-top:24px}
+.footer__bottom{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);margin-top:56px;padding-top:24px;font-size:13px;color:#7F8896}
+.socials{display:flex;gap:8px;margin-top:20px}
+.socials a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07);color:#fff;font-size:12px;font-weight:600}
+.socials a:hover{background:rgba(255,255,255,.16)}
+
+/* ---------- Forms ---------- */
+.field{display:grid;gap:8px}
+.field label{font-size:13px;font-weight:500;color:var(--muted)}
+.input{height:54px;border-radius:14px;border:1px solid var(--line);background:var(--card);padding:0 18px;font-size:16px;width:100%;transition:border-color .2s}
+.input:focus{outline:none;border-color:var(--ink)}
+textarea.input{height:auto;min-height:110px;padding:14px 18px;resize:vertical}
+.consent{font-size:12.5px;color:var(--muted);line-height:1.45}
+.consent a{text-decoration:underline}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);font-size:15px;font-weight:500;cursor:pointer;transition:.15s;color:var(--ink-2)}
+.seg label:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.seg input:checked + label{background:var(--ink);color:#fff;box-shadow:none}
+.seg input:focus-visible + label{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ---------- Mockup switcher ---------- */
+
+/* ---------- Responsive base ---------- */
+@media (max-width:1180px){
+  .nav{display:none}
+  .phone{display:none}
+  .burger{display:grid}
+  .header .btn--cta{display:none}
+  .footer__top{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer__brand{grid-column:1/-1}
+}
+@media (max-width:720px){
+  body{font-size:15.5px}
+  .topbar{display:none}
+  .header .wrap{height:64px}
+  .logo img{height:28px}
+  .btn{height:50px;padding:0 20px}
+  .footer__top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+}
